@@ -64,6 +64,7 @@ public class SingleLinkedList<T> implements ListInterface<T> {
 			throw new IndexOutOfBoundsException();
 		} else if (position == 0) {
 			front = front.getNextNode();
+			listSize--;
 		} else {
 			Node<T> nodeBefore = getNodeAt(position - 1);
 			Node<T> nodeToRemove = nodeBefore.getNextNode();
@@ -71,6 +72,7 @@ public class SingleLinkedList<T> implements ListInterface<T> {
 			Node<T> nodeAfter = nodeToRemove.getNextNode();
 			nodeBefore.setNextNode(nodeAfter);
 			nodeToRemove = null;
+			listSize--;
 		} // end if
 		return result;
 	} // end remove

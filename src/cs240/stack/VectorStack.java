@@ -12,8 +12,8 @@ public class VectorStack<T> implements StackInterface<T> {
 	private static final int SIZE = 10;
 	private static final int INCREMENT = 10;
 	
-	/** Creates a vector of size 10 that increments by 1 
-	 *  with each entry added*/
+	/** Creates a vector of size 10 that increments by 10 
+	 *  when the vector is resized upward*/
 	public VectorStack() {
 		Vector<T> tempStack = new Vector<T>(SIZE , INCREMENT);
 		stack = tempStack;
