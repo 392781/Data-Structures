@@ -51,8 +51,8 @@ public class LinkedStack<T> implements StackInterface<T> {
 			if(temp.getNextNode() != null) {
 				temp = temp.getNextNode();
 			} else {
-				temp.setNextNode(null);
 				popped = temp.getData();
+				temp.setNextNode(null);
 				temp = temp.getNextNode();
 			}
 		} // end while

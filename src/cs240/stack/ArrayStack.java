@@ -31,14 +31,14 @@ public class ArrayStack<T> implements StackInterface<T> {
 	} // end push
 	
 	/** Removes top most entry of the array stack
-	 *  @return The object at the top of the stack
+	 *  @return The object deleted from stack
 	 *  @throws EmptyStackException if stack is empty*/
 	public T pop() {
 		T result = null;
 		if (!isEmpty()) {
+			result = stack[numberOfEntries - 1];
 			stack[numberOfEntries - 1] = null;
 			numberOfEntries--;
-			result = stack[numberOfEntries - 1];
 		} else 
 			throw new EmptyStackException();
 			// end if

@@ -33,9 +33,9 @@ public class VectorStack<T> implements StackInterface<T> {
 	public T pop() {
 		T result = null;
 		if (!stack.isEmpty()) {
+			result = stack.get(numberOfEntries);
 			stack.remove(numberOfEntries);
 			numberOfEntries--;
-			result = stack.get(numberOfEntries);
 		} else {
 			System.out.println("Stack empty");
 		} // end if
