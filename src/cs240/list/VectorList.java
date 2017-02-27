@@ -50,6 +50,7 @@ public class VectorList<T> implements ListInterface<T> {
 		if (position < 0 || position > listSize)
 			throw new IndexOutOfBoundsException();
 		else {
+			result = list.elementAt(position);
 			list.remove(position);
 			listSize--;
 		} // end if
