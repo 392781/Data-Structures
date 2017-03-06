@@ -4,27 +4,29 @@ import cs240.list.*;
 
 public class Test {
 	public static void main(String[] args) {
-		SingleLinkedList<Object> SLL = new SingleLinkedList<Object>();
+		SingleLinkedList<Object> AL = new SingleLinkedList<Object>();
 		
-		SLL.add(1);
-		SLL.add(2);
-		SLL.add(3);
-		SLL.add(4);
-		SLL.add(5);
+		AL.add(1);
+		AL.add(2);
+		AL.add(3);
+		AL.add(4);
+		AL.add(5);
 		System.out.print("\n{ ");
-		for(int i = 0; i < SLL.getLength(); i++) {
-			System.out.print(SLL.getEntry(i) + " ");
+		for(int i = 0; i < AL.getLength(); i++) {
+			System.out.print(AL.getEntry(i) + " ");
 		}System.out.print("}\n");
 		
-		SLL.add(2, "h");
-		System.out.println(SLL.contains("h"));
-		SLL.replace(2, "x");
-		SLL.clear();
+		AL.add(2, "h");
+		System.out.println(AL.contains("h"));
+	//	AL.replace(2, "x");
+	//	AL.clear();
 		
 		System.out.print("\n{ ");
-		for(int i = 0; i < SLL.getLength(); i++) {
-			System.out.print(SLL.getEntry(i) + " ");
+		for(int i = 0; i < AL.getLength(); i++) {
+			System.out.print(AL.getEntry(i) + " ");
 		}System.out.print("}");
+		
+		System.out.println("Position 5: " + AL.getEntry(5));
 		
 	}
 }
