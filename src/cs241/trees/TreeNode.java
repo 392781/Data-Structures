@@ -1,4 +1,4 @@
-package cs240.trees;
+package cs241.trees;
 
 public class TreeNode<T> {
 	private T data;
