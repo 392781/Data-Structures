@@ -1,6 +1,6 @@
 package cs240.trees;
 
-public class TreeNode<T> {
+public class TreeNode<T extends Comparable<T>> {
 	private T data;
 	private TreeNode<T> leftChild;
 	private TreeNode<T> rightChild;
@@ -17,6 +17,11 @@ public class TreeNode<T> {
 		this.data = data;
 		this.leftChild = leftChild;
 		this.rightChild = rightChild;
+	}
+	
+	public int compareTo(T object) {
+		if (this == object)
+		return 0;
 	}
 	
 	public T getData() {
