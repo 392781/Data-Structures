@@ -26,6 +26,7 @@ public class HeapReh {
 	public int remove() {
 		int val = data[1];
 		data[1] = data[last];
+		data[last] = 0;
 		last--;
 		reheap(1);
 		return val;
