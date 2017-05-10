@@ -267,31 +267,31 @@ public class BinarySearchTreeG<T extends Comparable<T>> {
 				System.out.println("Command? ");
 			} else if (value.equals("D")) {
 				input = kb.nextInt();
-				tree.remove(input);
+				//tree.remove(input);
 				root.inorderTraverse();
 				System.out.println("Command? ");
 			} else if (value.equals("P")) {
 				input = kb.nextInt();
-				TreeNodeG<Integer> temp = tree.predecessor(input);
-				if (temp != null) {
-					System.out.println(temp.getData());
+			//	TreeNodeG<Integer> temp = tree.predecessor(input);
+			//	if (temp != null) {
+			//		System.out.println(temp.getData());
 				} else {
 					System.out.println("Predecessor doesn't exist");
 				}
 				System.out.println("Command? ");
-			} else if (value.equals("S")) {
+		//	} else if (value.equals("S")) {
 				input = kb.nextInt();
-				TreeNodeG<Integer> temp = tree.successor(input);
-				if (temp != null) {
-					System.out.println(temp.getData());
-				} else {
+			//	TreeNodeG<Integer> temp = tree.successor(input);
+				//if (temp != null) {
+					//System.out.println(temp.getData());
+			//	} else {
 					System.out.println("Successor doesn't exist");
 				}
 				System.out.println("Command? ");
-			} else if (value.equals("E")) {
+			//} else if (value.equals("E")) {
 				exit = true;
 				System.out.println("Good-bye");
 			}
-		}
+		
 	}
-}
+
