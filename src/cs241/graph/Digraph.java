@@ -14,11 +14,10 @@ public class Digraph<T> {
 	
 	@SuppressWarnings("unchecked")
 	public Digraph(int n) {
-		edges = new int[n][n];
-		labels = (T[]) new Object[n];
-		distances = new int[n];
+		edges = new int[n + 1][n + 1];
+		labels = (T[]) new Object[n + 1];
+		distances = new int[n + 1];
 	}
-	
 	
 	public boolean isEdge(int src, int trg) {
 		return edges[src][trg] > 0;
@@ -26,6 +25,10 @@ public class Digraph<T> {
 	
 	public int getWeight(int src, int trg) {
 		return edges[src][trg];
+	}
+	
+	public int getDistance(int label) {
+		return distances[label];
 	}
 	
 	public void addEdge(int src, int trg, int distance) {
@@ -68,7 +71,7 @@ public class Digraph<T> {
 		return labels.length;
 	}
 	
-	public void dijistra(int src, int trg) {
+	public Stack<Integer> dijkstra(int src, int trg) {
 		Map<Integer, Integer> prevMap = new HashMap<Integer, Integer>();
 		Queue<Integer> distQueue = new PriorityQueue<Integer>(new Comparator<Integer>() {
 			@Override
@@ -100,7 +103,6 @@ public class Digraph<T> {
 			}
 		}
 		
-		System.out.println(prevMap);
 		Stack<Integer> trace = new Stack<Integer>();
 		trace.push(trg);
 		int current = trg;
@@ -111,12 +113,10 @@ public class Digraph<T> {
 				trace.push(current);
 			} else {
 				System.out.println("No shortest path.");
-				return;
+				return null;
 			}
 		}
 		
-		while (!trace.isEmpty()) {
-			System.out.println(labels[trace.pop()]);
-		}
+		return trace;
 	}
 }
