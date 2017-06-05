@@ -46,6 +46,7 @@ public class HeapTest {
 			
 			System.out.println("\nAvg swaps sequential: " + avgS);
 			System.out.println("Avg swaps optimal: " + avgR);
+			
 		} else if (choice == 2) {
 			int swapsS;
 			int swapsR;
