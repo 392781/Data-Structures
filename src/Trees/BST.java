@@ -1,3 +1,5 @@
+package Trees;
+
 public abstract class BST<T extends Comparable<T>> {
     private Node<T> root;
 
@@ -65,5 +67,6 @@ public abstract class BST<T extends Comparable<T>> {
 
             }
         }
+        return false;
     }
 }
